@@ -71,6 +71,7 @@ func main() {
 		lc.Error("Vault is still under sealed status.")
 	}
 
-	cert, sk, err := generateCerKeyPair()
-	uploadProxyCerts(config, secretServiceBaseURL, cert, sk, client)
+	//this is not needed as we are going to rely the new vault-go (under pkisetup) process to create cert and key then store into vault.
+	//cert, sk, err := generateCerKeyPair()
+	//uploadProxyCerts(config, secretServiceBaseURL, cert, sk, client)
 }
